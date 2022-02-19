@@ -16,7 +16,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/5.0 (Windows NT 10.0; WebScraping; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36');
-curl_setopt($ch, CURLOPT_URL, 'https://who.is/whois/yhyasyrian.xyz');
+curl_setopt($ch, CURLOPT_URL, 'https://who.is/whois/google.com');
 $result = curl_exec($ch);
 curl_close($ch);
 $RegExKey = '#<div class="col-md-4 queryResponseBodyKey">(.*)</div>#';
