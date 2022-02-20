@@ -23,7 +23,7 @@ $RegExKey = '#<div class="col-md-4 queryResponseBodyKey">(.*)</div>#';
 $RegExValue = '#<div class="col-md-8 queryResponseBodyValue">(.*)</div>#';
 preg_match_all($RegExKey,$result,$returnKey);
 preg_match_all($RegExValue,$result,$returnValue);
-if(isset($returnValue[1][2])){
+if(isset($returnValue[1][2]) and !empty($returnValue[1][2])){
 	$result = ['ok'=>true];
 	unset($returnKey[1][3]);
 	$result['result'] = merge_array($returnKey[1],$returnValue[1]);
